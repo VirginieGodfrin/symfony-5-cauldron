@@ -1,0 +1,14 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    SensioLabs\Security\SecurityChecker: null
+
+    SensioLabs\Security\Command\SecurityCheckerCommand: null
+
+# How recipes work : when we install pakage, flex check to see if there is a recipe, 
+# if there is one he install it. Recipe automate the install of the package, 
+# it configures and modifies the necessary files.
+
+# With sec-check, each time we do composer install composer check security.
