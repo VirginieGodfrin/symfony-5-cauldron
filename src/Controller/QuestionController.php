@@ -24,6 +24,7 @@ class QuestionController extends AbstractController
 //        Render return a Response Object with html inside
 //        Because a Controller always return a Response
 //        It's like that and that the way to is.
+        dump($slug, $this);
         $answers = [
             "I am bad woman",
             "I am super woman",
