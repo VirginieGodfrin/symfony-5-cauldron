@@ -26,7 +26,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <a class="q-title" href="#"><h2>Reversing a Spell</h2></a>
+                            <a class="q-title" href="{{ path('app_question_show', {slug : 'reversing-a-spell'}) }}"><h2>Reversing a Spell</h2></a>
                             <div class="q-display p-3">
                                 <i class="fa fa-quote-left mr-3"></i>
                                 <p class="d-inline">I've been turned into a cat, any thoughts on how to turn back? While I'm adorable, I don't really care for cat food.</p>
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                 </div>
-                <a class="answer-link" href="#" style="color: #fff;">
+                <a class="answer-link" href="{{ path('app_question_show', {slug : 'reversing-a-spell'}) }}" style="color: #fff;">
                     <p class="q-display-response text-center p-3">
                         <i class="fa fa-magic magic-wand"></i> 6 answers
                     </p>
@@ -49,12 +49,12 @@
                     <div class="col-2 text-center">
                         <img src="{{ asset('images/magic-photo.png') }}" width="100" height="100">
                         <div class="d-block mt-3 vote-arrows">
-                            <a class="vote-up" href="#"><i class="far fa-arrow-alt-circle-up"></i></a>
+                            <a class="vote-up" href="{{ path('app_question_show', {slug : 'pausing_a_spell'}) }}"><i class="far fa-arrow-alt-circle-up"></i></a>
                             <a class="vote-down" href="#"><i class="far fa-arrow-alt-circle-down"></i></a>
                         </div>
                     </div>
                     <div class="col">
-                        <a class="q-title" href="#"><h2>Pausing a Spell</h2></a>
+                        <a class="q-title" href="{{ path('app_question_show', {slug : 'pausing_a_spell'}) }}"><h2>Pausing a Spell</h2></a>
                         <div class="q-display p-3">
                             <i class="fa fa-quote-left mr-3"></i>
                             <p class="d-inline">I mastered the floating card, but now how do I get it back to the ground?</p>
