@@ -12,7 +12,7 @@ class QuestionController extends AbstractController
      */
     public function homepage() 
     {
-        return new Response("Hello my first controller");
+        return $this->render('question/homepage.html.twig');
     }
     
     /**
