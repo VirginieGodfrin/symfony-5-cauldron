@@ -3,8 +3,9 @@
 namespace App\Controller;
 use Symfony\Component\HttpFoundation\Response; 
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class QuestionController
+class QuestionController extends AbstractController
 {
     /**
      * @Route("/")
@@ -20,10 +21,18 @@ class QuestionController
      */
     public function show($slug) 
     {
-//        dump($slug);
-        return new Response(sprintf(
-            'future page to the question "%s" !',
-            ucwords(str_replace('-',' ', $slug))
-        ));
+//        Render return a Response Object with html inside
+//        Because a Controller always return a Response
+//        It's like that and that the way to is.
+        $answers = [
+            "I am bad woman",
+            "I am super woman",
+            "I am cat woman"
+        ];
+        
+        return $this->render('question/show.html.twig', [
+            'question' => ucwords(str_replace('-',' ', $slug)),
+            'answers' => $answers
+        ]);
     }
 }
