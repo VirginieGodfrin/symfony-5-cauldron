@@ -1,0 +1,4 @@
+# This is default path to the template directory. 
+# If I put template somewere else, I need to rewrite this line.
+twig:
+    default_path: '%kernel.project_dir%/templates'
