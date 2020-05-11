@@ -7,8 +7,9 @@ use \Symfony\Component\HttpFoundation\JsonResponse;
 
 class CommentController extends AbstractController
 {
+    // add requirements on route parameters
     /**
-     * @Route("/comments/{id}/vote/{direction}")
+     * @Route("/comments/{id}/vote/{direction<up|down>}", methods="POST")
      */
     public function commentVote($id, $direction) 
     {
