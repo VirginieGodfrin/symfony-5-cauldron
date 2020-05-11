@@ -3,7 +3,8 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
-use \Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Psr\Log\LoggerInterface;
 
 class CommentController extends AbstractController
 {
@@ -11,11 +12,13 @@ class CommentController extends AbstractController
     /**
      * @Route("/comments/{id}/vote/{direction<up|down>}", methods="POST")
      */
-    public function commentVote($id, $direction) 
+    public function commentVote($id, $direction, LoggerInterface $loger) 
     {
         if($direction === 'up'){
+            $loger->info("Voting-up");
             $currentVoteCount = rand(7,100);
         }else{
+            $loger->info("Voting-down");
             $currentVoteCount = rand(0,5);
         }
         
